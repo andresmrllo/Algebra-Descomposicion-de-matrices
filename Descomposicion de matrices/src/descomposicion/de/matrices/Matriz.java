@@ -20,10 +20,10 @@ public class Matriz {
         System.out.print("Cuantas filas y columnas tiene la matriz:");
         int orden =teclado.nextInt();
         matriz=new int[orden][orden];
-        for(int f=0;f<matriz.length;f++) {
-            for(int c=0;c<matriz[f].length;c++) {
+        for (int[] matriz1 : matriz) {
+            for (int c = 0; c < matriz1.length; c++) {
                 System.out.print("Ingrese componente:");
-                matriz[f][c]=teclado.nextInt();
+                matriz1[c] = teclado.nextInt();
             }
         }
     }
