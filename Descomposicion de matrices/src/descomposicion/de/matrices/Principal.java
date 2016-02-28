@@ -14,8 +14,14 @@ public class Principal {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         // TODO code application logic here
-    }
+        Matriz ma=new Matriz();
+        ma.cargar();
+        ma.imprimir();
+       // ma.imprimirUltimaFila();
+        ma.crearTranspuesta(ma.matriz);
+    } 
+ }
     
-}
