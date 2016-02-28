@@ -19,9 +19,10 @@ public class Principal {
         // TODO code application logic here
         Matriz ma=new Matriz();
         ma.cargar();
-        ma.imprimir();
+        ma.imprimir(ma.matriz);
        // ma.imprimirUltimaFila();
-        ma.crearTranspuesta(ma.matriz);
+        int[][] transpuesta = ma.crearTranspuesta(ma.matriz);
+        ma.crearMatrizSimetrica(transpuesta, ma.matriz);
     } 
  }
     

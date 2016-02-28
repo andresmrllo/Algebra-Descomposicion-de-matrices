@@ -14,11 +14,12 @@ import java.util.Scanner;
 public class Matriz {
     private Scanner teclado;
     public int[][] matriz;
+    public int orden ;
     
     public void cargar() {
         teclado=new Scanner(System.in);
         System.out.print("Cuantas filas y columnas tiene la matriz:");
-        int orden =teclado.nextInt();
+        orden =teclado.nextInt();
         matriz=new int[orden][orden];
         for (int[] matriz1 : matriz) {
             for (int c = 0; c < matriz1.length; c++) {
@@ -28,7 +29,7 @@ public class Matriz {
         }
     }
     
-    public void imprimir() {
+    public void imprimir(int[][] matriz) {
         for(int f=0;f<matriz.length;f++) {
             for(int c=0;c<matriz[f].length;c++) {
                 System.out.print(matriz[f][c]+" ");
@@ -57,15 +58,20 @@ public class Matriz {
         }
         return trans;
     }
-     public void crearMatrizSimetrica(int trans[][],int matrizR[][]){
+     public void crearMatrizSimetrica(int trans[][]){
+        int[][] simetrica = new int[orden][orden];
         System.out.println("Creando matriz simetrica");
         for(int i=0; i<matriz.length;i++){
             for(int j=0; j<matriz[i].length||j<trans[i].length;j++){
+                int posicion =(matriz[i][j]+trans[i][j]);
+                simetrica[i][j]= posicion/2;
                 //System.out.print(simet[mat[i]+trans[i]][mat[j]+trans[j]] +" ");
                 
-               int[][] s;
+               
                 //s = matriz[i][j]+trans[i][j];
                 }
+            
         }
+        imprimir(simetrica);
     }
 }
