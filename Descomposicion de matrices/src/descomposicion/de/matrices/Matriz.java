@@ -30,32 +30,40 @@ public class Matriz {
     }
     
     public void imprimir(int[][] matriz) {
-        for(int f=0;f<matriz.length;f++) {
-            for(int c=0;c<matriz[f].length;c++) {
-                System.out.print(matriz[f][c]+" ");
-                }
+        for (int[] matriz1 : matriz) {
+            for (int c = 0; c < matriz1.length; c++) {
+                System.out.print(matriz1[c] + " ");
+            }
             System.out.println();
         }
     }
     
-    /**
-     *
-     */
-    public void imprimirUltimaFila() {
+
+    /*public void imprimirUltimaFila() {
     	System.out.println("Ultima fila");
         for(int c=0;c<matriz[matriz.length-1].length;c++) {
              System.out.print(matriz[matriz.length-1][c]+" ");
         }
-    }
-    public int[][] crearTranspuesta(int trans[][]){
+    }*/
+    
+     /**
+     *
+     * @param trans
+     * @return 
+     */
+    public int[][] crearTranspuesta(){
+        int trans[][] = new int[orden][orden];
         System.out.println("Creando la matriz transpuesta");
         for(int i=0;i<matriz.length;i++){
             for(int j=0;j<matriz[i].length;j++){
-                System.out.print(trans[j][i] +" ");
+                trans[j][i]= matriz[i][j];
+                //System.out.print(trans[j][i] +" ");
                 
             }
-            System.out.println();
+            //System.out.println();
         }
+        imprimir(trans);
+                
         return trans;
     }
      public void crearMatrizSimetrica(int trans[][]){

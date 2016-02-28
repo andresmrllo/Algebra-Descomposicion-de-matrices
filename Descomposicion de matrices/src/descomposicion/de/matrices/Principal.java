@@ -21,8 +21,8 @@ public class Principal {
         ma.cargar();
         ma.imprimir(ma.matriz);
        // ma.imprimirUltimaFila();
-        int[][] transpuesta = ma.crearTranspuesta(ma.matriz);
-        ma.crearMatrizSimetrica(transpuesta, ma.matriz);
+        int[][] transpuesta = ma.crearTranspuesta();
+        ma.crearMatrizSimetrica(transpuesta);
     } 
  }
     
