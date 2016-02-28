@@ -14,11 +14,12 @@ import java.util.Scanner;
 public class Matriz {
     private Scanner teclado;
     public int[][] matriz;
+    public int orden ;
     
     public void cargar() {
         teclado=new Scanner(System.in);
         System.out.print("Cuantas filas y columnas tiene la matriz:");
-        int orden =teclado.nextInt();
+        orden =teclado.nextInt();
         matriz=new int[orden][orden];
         for (int[] matriz1 : matriz) {
             for (int c = 0; c < matriz1.length; c++) {
@@ -28,44 +29,57 @@ public class Matriz {
         }
     }
     
-    public void imprimir() {
-        for(int f=0;f<matriz.length;f++) {
-            for(int c=0;c<matriz[f].length;c++) {
-                System.out.print(matriz[f][c]+" ");
-                }
+    public void imprimir(int[][] matriz) {
+        for (int[] matriz1 : matriz) {
+            for (int c = 0; c < matriz1.length; c++) {
+                System.out.print(matriz1[c] + " ");
+            }
             System.out.println();
         }
     }
     
-    /**
-     *
-     */
-    public void imprimirUltimaFila() {
+
+    /*public void imprimirUltimaFila() {
     	System.out.println("Ultima fila");
         for(int c=0;c<matriz[matriz.length-1].length;c++) {
              System.out.print(matriz[matriz.length-1][c]+" ");
         }
-    }
-    public int[][] crearTranspuesta(int trans[][]){
+    }*/
+    
+     /**
+     *
+     * @param trans
+     * @return 
+     */
+    public int[][] crearTranspuesta(){
+        int trans[][] = new int[orden][orden];
         System.out.println("Creando la matriz transpuesta");
         for(int i=0;i<matriz.length;i++){
             for(int j=0;j<matriz[i].length;j++){
-                System.out.print(trans[j][i] +" ");
+                trans[j][i]= matriz[i][j];
+                //System.out.print(trans[j][i] +" ");
                 
             }
-            System.out.println();
+            //System.out.println();
         }
+        imprimir(trans);
+                
         return trans;
     }
-     public void crearMatrizSimetrica(int trans[][],int matrizR[][]){
+     public void crearMatrizSimetrica(int trans[][]){
+        int[][] simetrica = new int[orden][orden];
         System.out.println("Creando matriz simetrica");
         for(int i=0; i<matriz.length;i++){
             for(int j=0; j<matriz[i].length||j<trans[i].length;j++){
+                int posicion =(matriz[i][j]+trans[i][j]);
+                simetrica[i][j]= posicion/2;
                 //System.out.print(simet[mat[i]+trans[i]][mat[j]+trans[j]] +" ");
                 
-               int[][] s;
+               
                 //s = matriz[i][j]+trans[i][j];
                 }
+            
         }
+        imprimir(simetrica);
     }
 }
