@@ -82,4 +82,23 @@ public class Matriz {
         }
         imprimir(simetrica);
     }
+     
+     
+     public void crearMatrizAntiSimetrica(int trans[][]){
+        
+        int[][] antisimetrica = new int[orden][orden];
+        
+        System.out.println("Creando matriz Anti-simetrica: ");
+        
+        for(int i=0; i < matriz.length; i++){
+            
+            for(int j=0; j < matriz[i].length || j < trans[i].length; j++){
+                int posicion =(matriz[i][j] - trans[i][j]);
+                antisimetrica[i][j]= posicion/2;
+                }
+            
+        }
+        
+        imprimir(antisimetrica);
+    }
 }
