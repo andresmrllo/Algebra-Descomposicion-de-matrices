@@ -23,6 +23,7 @@ public class Principal {
        // ma.imprimirUltimaFila();
         int[][] transpuesta = ma.crearTranspuesta();
         ma.crearMatrizSimetrica(transpuesta);
+        ma.crearMatrizAntiSimetrica(transpuesta);
     } 
  }
     
