@@ -15,7 +15,6 @@ import java.util.Scanner;
 public class Principal {
 
     /**
-     * @param args the command line arguments
      */
     
         public static void promptEnterKey(){        
@@ -84,13 +83,6 @@ public class Principal {
     {
         System.out.println("Bienvenido");
         menu();
-        /*
-        // TODO code application logic here
-        Matriz ma=new Matriz();
-        ma.cargar();
-        ma.imprimir(ma.matriz);
-       // ma.imprimirUltimaFila();
-        int[][] transpuesta = ma.crearTranspuesta();*/
     } 
  }
     
