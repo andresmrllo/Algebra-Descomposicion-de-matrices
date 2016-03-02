@@ -10,13 +10,10 @@ import java.util.Scanner;
 
 /**
  *
- * @author Andresmrllo
+ * @author Minor Umaña, Monica Ureña , Jose Ramirez
  */
-public class Principal {
 
-    /**
-     * @param args the command line arguments
-     */
+public class Principal {
     
         public static void promptEnterKey(){        
         try {            
@@ -84,13 +81,6 @@ public class Principal {
     {
         System.out.println("Bienvenido");
         menu();
-        /*
-        // TODO code application logic here
-        Matriz ma=new Matriz();
-        ma.cargar();
-        ma.imprimir(ma.matriz);
-       // ma.imprimirUltimaFila();
-        int[][] transpuesta = ma.crearTranspuesta();*/
     } 
  }
     

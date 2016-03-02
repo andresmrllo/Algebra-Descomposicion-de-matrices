@@ -9,8 +9,9 @@ import java.util.Scanner;
 
 /**
  *
- * @author Andresmrllo
+ * @author Minor Umaña, Monica Ureña , Jose Ramirez
  */
+
 public class Matriz {
     private Scanner teclado;
     public int[][] matriz;
@@ -37,32 +38,15 @@ public class Matriz {
             System.out.println();
         }
     }
-    
 
-    /*public void imprimirUltimaFila() {
-    	System.out.println("Ultima fila");
-        for(int c=0;c<matriz[matriz.length-1].length;c++) {
-             System.out.print(matriz[matriz.length-1][c]+" ");
-        }
-    }*/
-    
-     /**
-     *
-     * @param trans
-     * @return 
-     */
     public int[][] crearTranspuesta(){
         int trans[][] = new int[orden][orden];
-        //System.out.println("Creando la matriz transpuesta");
         for(int i=0;i<matriz.length;i++){
             for(int j=0;j<matriz[i].length;j++){
                 trans[j][i]= matriz[i][j];
-                //System.out.print(trans[j][i] +" ");
                 
             }
-            //System.out.println();
         }
-        //imprimir(trans);
                 
         return trans;
     }
