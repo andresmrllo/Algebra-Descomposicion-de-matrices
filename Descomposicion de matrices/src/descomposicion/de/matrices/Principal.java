@@ -10,12 +10,10 @@ import java.util.Scanner;
 
 /**
  *
- * @author Andresmrllo
+ * @author Minor Umaña, Monica Ureña , Jose Ramirez
  */
-public class Principal {
 
-    /**
-     */
+public class Principal {
     
         public static void promptEnterKey(){        
         try {            
