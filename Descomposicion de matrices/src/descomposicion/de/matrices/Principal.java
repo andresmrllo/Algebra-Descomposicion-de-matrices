@@ -15,7 +15,7 @@ import java.util.Scanner;
 
 public class Principal {
     
-        public static void promptEnterKey(){        
+    public static void promptEnterKey(){        
         try {            
             System.out.println("Presione \"ENTER\" para continuar...");
             int read = System.in.read(new byte[2]);
@@ -47,7 +47,7 @@ public class Principal {
     public static void cualMetodo(int seleccion)
     {
         Matriz ma;
-        int[][] transpuesta ;
+        double[][] transpuesta ;
         
         switch(seleccion) 
         {
